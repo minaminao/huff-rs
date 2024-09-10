@@ -3,6 +3,7 @@ use std::fmt;
 use strum_macros::EnumString;
 
 /// All the EVM opcodes as a static array
+/// 
 /// They are arranged in a particular order such that all the opcodes that have common
 /// prefixes are ordered by decreasing length to avoid mismatch when lexing.
 /// Example : [origin, or] or [push32, ..., push3]

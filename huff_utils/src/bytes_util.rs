@@ -3,6 +3,7 @@ use std::num::ParseIntError;
 use tiny_keccak::{Hasher, Keccak};
 
 /// Convert a string slice to a `[u8; 32]`
+/// 
 /// Pads zeros to the left of significant bytes in the `[u8; 32]` slice.
 /// i.e. 0xa57b becomes `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 /// 0, 0, 0, 0, 0, 165, 123]`
