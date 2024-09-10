@@ -1,8 +1,9 @@
 <img align="right" width="150" height="150" top="100" src="./assets/huff.png">
 
-# huff-rs • [![ci](https://github.com/huff-language/huff-rs/actions/workflows/ci.yaml/badge.svg)](https://github.com/huff-language/huff-rs/actions/workflows/ci.yaml) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![Crates.io](https://img.shields.io/crates/v/huff-rs) ![Discord](https://img.shields.io/discord/980519274600882306)
+# huff-rs • [![ci](https://github.com/minaminao/huff-rs/actions/workflows/ci.yaml/badge.svg)](https://github.com/minaminao/huff-rs/actions/workflows/ci.yaml) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![Crates.io](https://img.shields.io/crates/v/huff-rs) ![Discord](https://img.shields.io/discord/980519274600882306)
 
-> `huff-rs` is a [Huff](https://github.com/huff-language) compiler built in rust.
+This is a fork of [huff-rs](https://github.com/huff-language/huff-rs).
+`huff-rs` is a [Huff](https://github.com/huff-language) compiler built in Rust.
 
 ## What is a Huff?
 
@@ -26,7 +27,7 @@ First run the command below to get `huffup`, the Huff installer:
 curl -L get.huff.sh | bash
 ```
 
-To avoid redirecting the script directly into bash, download and run the [huffup installation script](https://raw.githubusercontent.com/huff-language/huff-rs/main/huffup/install).
+To avoid redirecting the script directly into bash, download and run the [huffup installation script](https://raw.githubusercontent.com/minaminao/huff-rs/main/huffup/install).
 
 To install the Huff compiler, simply run `huffup`.
 
@@ -48,7 +49,7 @@ huff_cli 0.3.2
 Install from source by running:
 
 ```bash
-git clone https://raw.githubusercontent.com/huff-language/huff-rs
+git clone https://raw.githubusercontent.com/minaminao/huff-rs
 cd huff-rs
 cargo install --path ./huff_cli --bins --locked --force
 ```
@@ -56,19 +57,8 @@ cargo install --path ./huff_cli --bins --locked --force
 OR
 
 ```bash
-cargo install --git https://raw.githubusercontent.com/huff-language/huff-rs --locked huff_cli
+cargo install --git https://raw.githubusercontent.com/minaminao/huff-rs --locked huff_cli
 ```
-
-## How Fast?
-
-**Compilation Benchmarks**
-
-| Compiler                         | Cold (No Cache) | Light Cache | Deep Cache | Full Cache |
-| -------------------------------- | --------------- | ----------- | ---------- | ---------- |
-| [huff-language/huff-rs][huff-rs] | XXXms           | XXXms       | XXXms      | XXXms      |
-| [huff-language/huffc][huffc]     | XXXms           | XXXms       | XXXms      | XXXms      |
-
-_Note: Compilation benchmarks were performed on [huff-examples erc20](https://github.com/huff-language/huff-examples/tree/main/erc20/contracts/ERC20.huff)._
 
 ## Architecture
 
@@ -95,14 +85,9 @@ All contributions are welcome! We want to make contributing to this project as e
 - Proposing new features
 - Becoming a maintainer
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/huff-language/huff-rs/issues/new); it's that easy!
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/minaminao/huff-rs/issues/new); it's that easy!
 
 To run examples, make sure you update git submodules to pull down the [huff-examples](./huff-examples/) submodule by running `git submodule update`.
-
-The branching convention used by [huff-rs](https://github.com/huff-language/huff-rs) is a `stage` branch that is meant to be merged off of and is periodically merged into `main`. So, when creating a feature, branch off of the `stage` branch and create a pr from your branch into the `stage` branch!
-
-i.e:
-![Branching Conventions](./assets/branching.png)
 
 To pass github actions, please run:
 
@@ -156,9 +141,7 @@ For breaking changes: make sure to edit the [excalidraw asset](https://excalidra
 
 ## Acknowledgements
 
-The original [Huff Language](https://github.com/huff-language) compiler: [`huffc`](https://github.com/huff-language/huffc).
-
-An exemplary, minimal rust compiler: [ripc](https://github.com/ibraheemdev/ripc).
+The original [Huff Language](https://github.com/huff-language) compiler: [`huff-language/huff-rs`](https://github.com/huff-language/huff-rs).
 
 [Foundry](https://github.com/foundry-rs/foundry), for the many scripts, documentation, devops, and code on which [huff-rs](https://github.com/huff-language/huff-rs) is based on.
 
