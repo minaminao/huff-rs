@@ -1,8 +1,8 @@
 <img align="right" width="150" height="150" top="100" src="./assets/huff.png">
 
-# huff-rs • [![ci](https://github.com/minaminao/huff-rs/actions/workflows/ci.yaml/badge.svg)](https://github.com/minaminao/huff-rs/actions/workflows/ci.yaml) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![Crates.io](https://img.shields.io/crates/v/huff-rs) ![Discord](https://img.shields.io/discord/980519274600882306)
+# huff-rs • [![ci](https://github.com/minaminao/huff-rs/actions/workflows/ci.yaml/badge.svg)](https://github.com/minaminao/huff-rs/actions/workflows/ci.yaml) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![Crates.io](https://img.shields.io/crates/v/huff-rs)
 
-This is a fork of [huff-rs](https://github.com/huff-language/huff-rs).
+This is a fork of [huff-language/huff-rs](https://github.com/huff-language/huff-rs).
 `huff-rs` is a [Huff](https://github.com/huff-language) compiler built in Rust.
 
 ## What is a Huff?
@@ -19,8 +19,6 @@ To dive deeper into [Huff](https://github.com/huff-language), visit the [Officia
 
 ## Installation
 
-_Something not working? Send a message in [discord](https://discord.huff.sh)._
-
 First run the command below to get `huffup`, the Huff installer:
 
 ```bash
@@ -30,12 +28,6 @@ curl -L get.huff.sh | bash
 To avoid redirecting the script directly into bash, download and run the [huffup installation script](https://raw.githubusercontent.com/minaminao/huff-rs/main/huffup/install).
 
 To install the Huff compiler, simply run `huffup`.
-
-If you have the old [huffc (TypeScript version)](https://github.com/huff-language/huffc) npm package installed globally, you can remove it with:
-
-```bash
-sudo yarn global remove huffc
-```
 
 To make sure you are running the rust version, you can run `huffc --version` and it should respond with `huff_cli <version>`. If it responds with `2.0.0` that means you are running the Typescript version.
 
