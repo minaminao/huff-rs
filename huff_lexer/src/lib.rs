@@ -7,6 +7,7 @@ use std::{
 };
 
 /// Defines a context in which the lexing happens.
+/// 
 /// Allows to differientate between EVM types and opcodes that can either
 /// be identical or the latter being a substring of the former (example : bytes32 and byte)
 #[derive(Debug, PartialEq, Eq)]
@@ -625,23 +626,18 @@ impl<'a> Lexer<'a> {
                     }
 
                     // Then we should have an import path between quotes
-                    if let Some(char) = peekable_source.peek() {
-                        match char {
-                            '"' | '\'' => {
-                                peekable_source.next();
-                                let mut import = String::new();
-                                while peekable_source.peek().is_some() {
-                                    if let Some(c) = peekable_source.next() {
-                                        if matches!(c, '"' | '\'') {
-                                            imports.push(import);
-                                            break;
-                                        } else {
-                                            import.push(c);
-                                        }
-                                    }
+                    if let Some('"' | '\'') = peekable_source.peek() {
+                        peekable_source.next();
+                        let mut import = String::new();
+                        while peekable_source.peek().is_some() {
+                            if let Some(c) = peekable_source.next() {
+                                if matches!(c, '"' | '\'') {
+                                    imports.push(import);
+                                    break;
+                                } else {
+                                    import.push(c);
                                 }
                             }
-                            _ => { /* Ignore non-include tokens */ }
                         }
                     }
                 } else if nc.ne(&include_chars_iterator.next().unwrap()) {
