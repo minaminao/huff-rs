@@ -1,6 +1,6 @@
 <img align="right" width="150" height="150" top="100" src="./assets/huff.png">
 
-# huff-rs • [![ci](https://github.com/minaminao/huff-rs/actions/workflows/ci.yaml/badge.svg)](https://github.com/minaminao/huff-rs/actions/workflows/ci.yaml) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![Crates.io](https://img.shields.io/crates/v/huff-rs)
+# huff-rs • [![ci](https://github.com/minaminao/huff-rs/actions/workflows/ci.yaml/badge.svg)](https://github.com/minaminao/huff-rs/actions/workflows/ci.yaml) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 This is a fork of [huff-language/huff-rs](https://github.com/huff-language/huff-rs).
 `huff-rs` is a [Huff](https://github.com/huff-language) compiler built in Rust.
@@ -19,6 +19,7 @@ To dive deeper into [Huff](https://github.com/huff-language), visit the [Officia
 
 ## Installation
 
+<!-- 
 First run the command below to get `huffup`, the Huff installer:
 
 ```bash
@@ -35,8 +36,7 @@ To make sure you are running the rust version, you can run `huffc --version` and
 $ huffc --version
 huff_cli 0.3.2
 ```
-
-**Alternatively**
+**Alternatively** -->
 
 Install from source by running:
 
@@ -50,6 +50,13 @@ OR
 
 ```bash
 cargo install --git https://raw.githubusercontent.com/minaminao/huff-rs --locked huff_cli
+```
+
+To make sure you are running the version, you can run `huffc --version` and it should respond with `huff_cli <version>`.
+
+```bash
+$ huffc --version
+huff_cli 0.3.2
 ```
 
 ## Architecture
