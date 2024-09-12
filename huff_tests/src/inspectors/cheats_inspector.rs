@@ -37,7 +37,6 @@ where
         &mut self,
         _data: &mut EVMData<'_, DB>,
         inputs: &mut CallInputs,
-        _is_static: bool,
     ) -> (InstructionResult, Gas, Bytes) {
         (InstructionResult::Continue, Gas::new(inputs.gas_limit), Bytes::new())
     }
@@ -49,7 +48,6 @@ where
         remaining_gas: Gas,
         status: InstructionResult,
         out: Bytes,
-        _is_static: bool,
     ) -> (InstructionResult, Gas, Bytes) {
         let revm_cheats = revm::primitives::B160::from_slice(CHEATS_ADDR.as_bytes());
         if call.contract == revm_cheats && call.input.len() >= 64 {

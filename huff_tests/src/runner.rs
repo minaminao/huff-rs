@@ -11,9 +11,7 @@ use huff_utils::{
 };
 use revm::{
     db::DbAccount,
-    primitives::{
-        BlockEnv, CfgEnv, CreateScheme, Env, ExecutionResult, Output, SpecId, TransactTo, TxEnv,
-    },
+    primitives::{BlockEnv, CfgEnv, CreateScheme, Env, ExecutionResult, Output, TransactTo, TxEnv},
     Database, InMemoryDB, EVM,
 };
 
@@ -225,11 +223,7 @@ impl TestRunner {
     fn build_env(&self, caller: Address, to: TransactTo, data: Bytes, value: U256) -> Env {
         let revm_address = revm::primitives::B160::from_slice(caller.as_bytes());
         Env {
-            cfg: CfgEnv {
-                chain_id: revm::primitives::U256::from(1),
-                spec_id: SpecId::LATEST,
-                ..Default::default()
-            },
+            cfg: CfgEnv::default(),
             block: BlockEnv {
                 basefee: revm::primitives::U256::from(0),
                 gas_limit: U256::MAX.into(),

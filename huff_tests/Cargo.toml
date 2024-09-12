@@ -12,7 +12,9 @@ A stripped down testing framework for the Huff language.
 keywords = ["huff", "rust", "evm", "bytecode", "compiler"]
 
 [dependencies]
-revm = "=3.3.0"
+revm = "=3.4.0"
+revm-interpreter = "=1.2.0"
+revm-primitives = "=1.2.0"
 ethers-core = "=1.0.2"
 bytes = "=1.5.0"
 comfy-table = "=6.2.0"
